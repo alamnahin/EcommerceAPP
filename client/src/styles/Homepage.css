@@ -1,0 +1,125 @@
+/* client/src/styles/Homepage.css */
+
+/* ==================
+   Base Styles
+================== */
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-page h1 {
+  color: gray;
+  font-family: "Playfair Display", serif;
+}
+
+.banner-img {
+  margin-top: 60px;
+}
+
+/* ==================
+   Card Styles
+================== */
+.home-page .card {
+  background-color: rgba(128, 128, 128, 0.097);
+  /* ensure card takes full height of flex container so they align */
+  height: 100%;
+  border: none;
+}
+
+/* Image fix: keeps images consistent height without distortion */
+.home-page .card-img-top {
+  height: 300px !important;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.home-page .card-body {
+  display: flex;
+  flex-direction: column;
+  /* Pushes the button container to the bottom */
+  justify-content: space-between;
+}
+
+.home-page .card-name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.home-page .card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.home-page .card-price {
+  color: green;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.home-page .card-text {
+  color: rgb(90, 89, 89);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* ==================
+   Buttons
+================== */
+.home-page .card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.home-page button {
+  border-radius: 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  /* transition for hover effect */
+  transition: all 0.3s;
+}
+
+.home-page .card img:hover {
+  transform: scale(0.98);
+  /* subtle zoom out */
+  transition: transform 0.3s ease;
+}
+
+/* ==================
+   Filters
+================== */
+.filters h4 {
+  margin-top: 100px;
+  color: gray !important;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+  padding-bottom: 10px;
+}
+
+.ant-checkbox-wrapper {
+  margin: 5px 0;
+  display: block;
+  /* stack checkboxes */
+}
+
+.ant-radio-wrapper {
+  margin-bottom: 5px !important;
+  display: block;
+  /* stack radios */
+}
+
+.filters button {
+  background-color: black;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  margin-top: 20px;
+  color: white;
+  padding: 10px;
+}
